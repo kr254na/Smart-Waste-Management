@@ -1,0 +1,55 @@
+<%-layout('/layouts/boilerplate.ejs')%>
+<body >
+    <h1 style="text-align: center;">Thankyou for your feedback</h1>
+    <p style="text-align: center;">Your feedback has been recorded. We will review it and take necessary actions.</p>
+</body>
+<style>
+    body {
+        margin:10rem auto;
+    }
+    h1{
+       margin: 0 auto;
+       font-size:6rem;
+       width: 80%;
+        background-color: #2f8d46;
+       background-image: url(
+'https://img.pikbest.com/wp/202343/tropical-foliage-exquisite-stunning-fern-leaves-form-a-beautiful-nature-background-with-green-leaf-texture_9983753.jpg!sw800');
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center;
+       color: transparent;
+       background-clip: text;
+       -webkit-background-clip: text;
+      
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 10px green, 0 0 15px green, 0 0 20px green, 0 0 25px green, 0 0 30px green;
+  }
+  to {
+    text-shadow: 0 0 2px #fff, 0 0 10px greenyellow, 0 0 10px greenyellow, 0 0 10px greenyellow, 0 0 15px greenyellow, 0 0 20px greenyellow, 0 0 25px greenyellow;
+  }
+}
+    p{
+        margin: auto;
+        font-size: 1.5rem;
+        width: 60%;
+        text-align: justify;
+    }
+    @media(max-width:400px){
+      h1{
+        width:70vw;
+        font-size:3.5rem;
+      }
+      p{
+        margin-top:1rem;
+        width:90vw;
+        font-size:1.25rem;
+      }
+    }
+</style>

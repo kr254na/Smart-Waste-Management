@@ -1,0 +1,77 @@
+<%-layout("/layouts/boilerplate.ejs")%> 
+<%-include('../includes/navbar.ejs')%>
+<br /><br /><br />
+<body id="from">
+  <div class="row">
+    <div class="col-8 mt-3 fullform offset-2">
+      <h1 class="text-center mb-5">Help us Improve!!!</h1>
+      <form
+        action="/feedback"
+        method="post"
+        class="needs-validation"
+        novalidate
+      >
+        <div class="mb-3 namee">
+          <label for="name" class="name_place form-label">Name :</label>
+          <input
+            name="name"
+            placeholder="Enter your name"
+            type="text"
+            class="form-control"
+            id="name_inp"
+            required
+          />
+         
+        </div>
+        <div>
+          <div class="rate mt-5 ratings">
+          <label for="rating" class="form-label">Rate our Services :</label>
+          <fieldset class="starability-slot">
+            <input
+              type="radio"
+              id="no-rate"
+              class="input-no-rate"
+              name="rating"
+              value="1"
+              checked
+              aria-label="No rating."
+            />
+            <input type="radio" id="first-rate1" name="rating" value="1" />
+            <label for="first-rate1" title="Terrible">1 star</label>
+            <input type="radio" id="first-rate2" name="rating" value="2" />
+            <label for="first-rate2" title="Not good">2 stars</label>
+            <input type="radio" id="first-rate3" name="rating" value="3" />
+            <label for="first-rate3" title="Average">3 stars</label>
+            <input type="radio" id="first-rate4" name="rating" value="4" />
+            <label for="first-rate4" title="Very good">4 stars</label>
+            <input type="radio" id="first-rate5" name="rating" value="5" />
+            <label for="first-rate5" title="Amazing">5 stars</label>
+          </fieldset>
+        </div>
+        </div>
+        <!--<div class="mb-3">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+          </div>-->
+        <div class="mb-3 mt-3 namee">
+          <label for="feedback" class="form-label">Feedback :</label>
+          <textarea id="name_inp"
+            name="feedback"
+            placeholder="Please give us a feedback"
+            class="form-control"
+            type="text"
+            required
+          ></textarea>
+         </div>
+        <button id="submit" class="btn btn-dark edit-btn  mt-5 mb-3">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+
+<footer><%-include('../includes/footer.ejs')%></footer>

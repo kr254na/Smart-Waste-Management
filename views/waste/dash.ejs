@@ -1,0 +1,46 @@
+<%-layout("/layouts/boilerplate.ejs")%>
+<%-include("../includes/navbar.ejs")%>
+  <body>
+    <div class="dashboard">
+      <div class="upper_dash">
+      <div class="left_dash">
+        <h1>Smart Bins</h1>
+        <p>See all your Bin Details</p>
+      </div>
+      <div class="right_dash">
+        <img src="https://res.cloudinary.com/dsm5cjoxf/image/upload/v1738556505/dash_gsxtms.svg" alt="" />
+      </div>
+      </div>
+      <div class="lower_dash">
+      <div class="total_bin count">Total Bins<span><%=allDustbins.length%></span></div>
+      <div class="line"></div>
+      <div class="full_bin count">Full Bins<span style="color:red" class="fullBinCount"></span></div>
+      </div>
+    </div>
+    <div class="bins_grid">
+      <%for (let dustbin of allDustbins){%>
+        <div class=" bin">
+          <a href="/dustbin/<%=dustbin._id%>">
+                  <img src="https://res.cloudinary.com/dsm5cjoxf/image/upload/v1738556495/logo_rzan1u.png" alt="" />
+                  <h1 class="loc_head"><%=dustbin.location%></h1>
+                  <p class="fill_level"><%=dustbin.filled[dustbin.filled.length-1]%>% filled</p>
+                  </a>
+                </div>
+        <%}%>
+    </div>
+      </div>
+       <section id="map-container">
+      <h2>Bin Locations</h2>
+      <div id="map"></div>
+    </section>
+    <section id="charts">
+        <h2 style="margin-left:3rem">Waste Trends</h2>
+        <canvas style="padding:34px;" id="trendChart"></canvas>
+      </section>
+    </div>
+    
+  </body>
+  <footer>
+    <%-include('../includes/footer.ejs')%>
+  </footer>
+  <script id="server-data" type="application/json"><%-JSON.stringify(allDustbins)%></script>
