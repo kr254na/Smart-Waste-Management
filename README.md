@@ -42,7 +42,7 @@ a) Addition of moisture sensors to distinguish between dry and wet waste
 
 b) Addition of force sensor/ tilt sensor/ accelerometer to avoid sending incorrect data
 
-Website Link : [https://iot-based-smart-waste-management.onrender.com]()
+Website Link : [https://iot-based-smart-waste-management.onrender.com/]()
 
 ---
 
